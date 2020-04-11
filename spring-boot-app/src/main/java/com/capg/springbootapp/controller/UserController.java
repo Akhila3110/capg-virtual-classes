@@ -1,5 +1,6 @@
 package com.capg.springbootapp.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,9 +9,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.capg.springbootapp.model.User;
+import com.capg.springbootapp.service.AgeCalculatorService;
 
 @Controller
-public class TestController {
+public class UserController {
+	@Autowired
+	AgeCalculatorService service;
 	@GetMapping("/hello")
 	public String sayHello(@RequestParam("tbName") String traineeName, Model m)
 	{
@@ -21,6 +25,8 @@ public class TestController {
 	@PostMapping("/info")
 	public String readUserInfo(@ModelAttribute User user, Model m)
 	{
+		int age=service.getAge(user.getDob());
+		user.setAge(age);
 		m.addAttribute("user", user);
 		return "userinfo.jsp";
 		
