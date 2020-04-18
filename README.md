@@ -1,9 +1,14 @@
-# capg-virtual-classes
+# capg-virtual-classes:
 
-Instructions for Spring Boot with JSP
+1. JPA with Hibernate Labbook-1(Book Details)
+2. Spring5 Labbook-1(Employee and SBU Details)
+3. Spring5 Labbook-2(Spring MVC and JPA)
+4. Spring5 Labbook-3(WebServices and Spring REST)
 
-1. Create a folder "webapp" inside src->main->webapp
 
-2. Add Eclipse Java EE Tools from Help->EclipseMarketplace
 
-3. Add Tomcat Jasper Dependency to pom.xml
+
+
+
+
+
